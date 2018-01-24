@@ -13,14 +13,15 @@ export default class Surprise extends React.Component {
 
     }
 
-    changePage() {
+    changePage = () => {
       console.log('CLICKED!');
       this.setState({page: 'gif'});
     }
+    
     render() {
         // Show the button to start with
         if (this.state.page === 'button'){
-            return <SurpriseButton varName={() => this.changePage()} />;
+            return <SurpriseButton varName={this.changePage} />;
         }
 
         else {
